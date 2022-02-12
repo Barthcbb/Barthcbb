@@ -1,0 +1,60 @@
+import json
+import time
+import requests
+app_id = "APP ID"
+app_key = "APP KEY"
+endpoint = "entries"
+language_code = "en-us"
+
+
+
+
+
+
+
+
+thislist = ["LIST", "OF", "WORDS"]
+for x in thislist:
+	time.sleep(2)
+	word_id = x
+	url = "https://od-api.oxforddictionaries.com/api/v2/" + endpoint + "/" + language_code + "/" + word_id.lower()
+	r = requests.get(url, headers={"app_id": app_id, "app_key": app_key})
+	wordObject = json.loads(r.text)
+	try:
+		numberResults = len(wordObject["results"])
+		for nResults in range(numberResults):
+
+			numberLexicalEntries = len(
+				wordObject["results"][nResults]["lexicalEntries"])
+			for lexEn in range(numberLexicalEntries):
+				numberEntries = len(wordObject["results"][nResults]
+									["lexicalEntries"][lexEn]["entries"][0]["senses"])
+				for nSenses in range(numberEntries):
+
+					try:  # first definition & first example
+						# print first def and ex
+						print("\n",wordObject["word"], " @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["lexicalCategory"]["text"], " @ ",lexEn+1,"_",nSenses+1," ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["senses"][nSenses]["definitions"][0],
+							" @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["senses"][nSenses]["examples"][0], " @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["pronunciations"][1]["phoneticSpelling"])
+					except:
+						print("\n",wordObject["word"], " @ ",wordObject["results"][nResults]["lexicalEntries"][lexEn]["lexicalCategory"]["text"], " @ ",lexEn+1,"_",nSenses+1," ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"]
+						[0]["senses"][nSenses]["definitions"][0], " @ ", "missing example"," @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["pronunciations"][1]["phoneticSpelling"])
+
+					try:  # try for sub definition
+						try:
+							numberSubSenses = len(wordObject["results"][nResults]["lexicalEntries"]
+											[lexEn]["entries"][0]["senses"][nSenses]["subsenses"])
+							for nSubSenses in range(numberSubSenses):
+								print("\n",wordObject["word"], " @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["lexicalCategory"]["text"], " @ ",lexEn+1,"_",nSenses+1,"_",nSubSenses+1, wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["senses"][nSenses]["subsenses"][nSubSenses]["definitions"][0],
+										" @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["senses"][nSenses]["subsenses"][nSubSenses]["examples"][0], " @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["pronunciations"][1]["phoneticSpelling"])
+						except:
+							pass
+
+
+								
+
+					except:
+						print("\n",wordObject["word"], " @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["lexicalCategory"]["text"], " @ ",lexEn+1,"_",nSenses+1, wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["senses"]
+									[nSenses]["subsenses"][nSubSenses]["definitions"][0], " @ ", "missing sub example", " @ ", wordObject["results"][nResults]["lexicalEntries"][lexEn]["entries"][0]["pronunciations"][1]["phoneticSpelling"])
+
+	except:
+		pass
