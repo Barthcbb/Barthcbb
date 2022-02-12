@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Barthcbb (pseudonym)
+- 👋 Hi, I’m @Barthcbb
 - 👀 I’m interested in Language Learning, Fiction, and Film.
 - I'm an English philology student.
 - I'm not a programmer.
