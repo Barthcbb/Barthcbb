@@ -30,7 +30,7 @@ Honestly, I want to believe that you only need what I had:
 - Microsoft Visual Studio Code
 - Whatever package it asks you to install
 - An [Oxford API Account](https://developer.oxforddictionaries.com) and credentials Application ID & Application Keys
-- A considerable amount of patience to make up for any skill you lack, or information I left unclear
+- A considerable amount of patience to make up for any skill you lack, or information I left unclear because I don't even know how I pulled this off.
 
 <!---
 Barthcbb/Barthcbb is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
