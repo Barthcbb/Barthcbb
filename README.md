@@ -11,7 +11,9 @@ I wrote these scripts because I couldn't find an Anki add-on that did **ALL** of
 - format the resulting list so as to be compatible with the Anki import feature
 
 ## WHY BOTHER?
-- I wanted to create flashcards that respected the minimum information principle & respected honomyms.
+- I meet more new words than I have time to create new flashcards carefully
+- I prefer having a dictionary entry based card than none because I lacked the time and energy
+- I wanted to create flashcards that respected the _minimum information principle_ & respected **honomyms**.
 - I needed one separate card for each meaning and its usage example.
 
 ## WHAT NOW?
