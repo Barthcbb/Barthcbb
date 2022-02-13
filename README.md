@@ -3,6 +3,10 @@
 - I'm an English philology student.
 - I'm not a programmer.
 
+###### Update
+I managed to build a MacOS Shortcut that does the same things below, maybe even better. It was definitely easier to build.
+You can find it here: [Add shortcut](https://www.icloud.com/shortcuts/8f69cc5d94e84d1aafb0de28011de283)
+
 # WHAT IS THIS?
 I wrote these scripts because I couldn't find an Anki add-on that did **ALL** of the following:
 - define a batch of words automatically
