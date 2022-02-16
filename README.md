@@ -5,7 +5,7 @@
 
 ###### Update
 I managed to build a MacOS Shortcut that does the same things below, maybe even better. It was definitely easier to build.
-You can find it here: [Add shortcut](https://www.icloud.com/shortcuts/c35af562600745deacb0a2f07adb4630)
+You can find it here: [Add shortcut](https://www.icloud.com/shortcuts/372b42bee64e427a87269a857e4d2aa1)
 
 # WHAT IS THIS?
 I wrote these scripts because I couldn't find an Anki add-on that did **ALL** of the following:
